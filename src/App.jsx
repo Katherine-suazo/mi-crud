@@ -1,38 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Form from './assets/components/Form';
 import List from './assets/components/List';
 import './App.css';
 
-// function App() {
-//   const [count, setCount] = useState(0)
+function Saludo() {
+  return <h2>Hola, Bienvenido a mi aplicación de React!</h2>
+}
 
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
+function App() {
+  return (
+    <>
+      <Saludo/>
+      <img src="./src/assets/gato.png" className="logo" alt="logo"/>
+      <h1>Welcome to My React App</h1>
+      <Saludo/>
+    </>
+  )
+}
 
 
 function App() {
