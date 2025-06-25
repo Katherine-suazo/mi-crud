@@ -3,20 +3,20 @@ import Form from './assets/components/Form';
 import List from './assets/components/List';
 import './App.css';
 
-function Saludo() {
-  return <h2>Hola, Bienvenido a mi aplicación de React!</h2>
-}
+// function Saludo() {
+//   return <h2>Hola, Bienvenido a mi aplicación de React!</h2>
+// }
 
-function App() {
-  return (
-    <>
-      <Saludo/>
-      <img src="./src/assets/gato.png" className="logo" alt="logo"/>
-      <h1>Welcome to My React App</h1>
-      <Saludo/>
-    </>
-  )
-}
+// function App() {
+//   return (
+//     <>
+//       <Saludo/>
+//       <img src="./src/assets/gato.png" className="logo" alt="logo"/>
+//       <h1>Welcome to My React App</h1>
+//       <Saludo/>
+//     </>
+//   )
+// }
 
 
 function App() {
