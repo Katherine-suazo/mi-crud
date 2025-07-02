@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>CRUD con LocalStorage</h1>
+      <h1>Evaluacion de alumnos</h1>
       <Form
         addOrUpdateItem={addOrUpdateItem}
         itemToEdit={itemToEdit}

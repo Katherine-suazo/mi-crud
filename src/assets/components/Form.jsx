@@ -6,7 +6,8 @@ function Form({ addOrUpdateItem, itemToEdit }) {
   useEffect(() => {
     if (itemToEdit) {
       setInputValue(itemToEdit.value);
-    } else {
+    }
+    else {
       setInputValue('');
     }
   }, [itemToEdit]);
@@ -26,7 +27,7 @@ function Form({ addOrUpdateItem, itemToEdit }) {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <button type="submit">{ itemToEdit ? 'Actualizar' : 'Agregar' }</button>
+      <button className="btn btn-primary" type="submit">{ itemToEdit ? 'Actualizar Evaluación' : 'Agregar Evaluación' }</button>
     </form>
     
   );
