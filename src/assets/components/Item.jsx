@@ -3,18 +3,21 @@ import React from 'react';
 function Item({ item, deleteItem, editItem }) {
   return (
 
-    <li className="item">
+    <div>
 
-      <p><strong>Alumno:</strong> {item.nombre}</p>
-      <p><strong>Asignatura:</strong> {item.asignatura}</p>
-      <p><strong>Promedio:</strong> {item.promedio}</p>
+      <div className='textLeft'>
+        <p><strong>Alumno:</strong> {item.nombre}</p>
+        <p>Asignatura: {item.asignatura}</p>
+        <p>Promedio: <strong>{item.promedio}</strong></p>
+        {item.promedio == 7.0 && <span className='destacado'>Destacado</span>}
+      </div>
 
-      {item.promedio == 7 && <span className='destacado'>Destacado</span>}
+      <div className='botones'>
+        <button className="btn btn-outline-warning botones" onClick={() => editItem(item)}>Editar</button>
+        <button className="btn btn-outline-danger botones"  onClick={() => deleteItem(item.id)}>Eliminar</button>
+      </div>
 
-      <button className="btn btn-warning" onClick={() => editItem(item)}>Editar</button>
-      <button className="btn btn-danger"  onClick={() => deleteItem(item.id)}>Eliminar</button>
-
-    </li>
+    </div>
   );
 }
 

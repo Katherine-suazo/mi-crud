@@ -4,3 +4,50 @@
     box-sizing: border-box;
     /* border: 1px dotted green; */
 }
+
+.bordeTitulo {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.426)
+}
+
+.bordeFormulario {
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.426);
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.botones {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.destacado {
+    color: rgb(36, 68, 162);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(196, 227, 255);
+}
+
+.espacio {
+    padding-top: 20px;
+}
+
+.bordeEG {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.426)
+}
+
+.border{
+    border-radius: 10px;
+    padding: 10px;
+}

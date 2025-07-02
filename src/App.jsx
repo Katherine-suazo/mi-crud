@@ -3,6 +3,7 @@ import Form from './assets/components/Form';
 import List from './assets/components/List';
 import './App.css';
 
+
 function App() {
   const [items, setItems] = useState([]);
   const [itemToEdit, setItemToEdit] = useState(null);
@@ -16,13 +17,17 @@ function App() {
     localStorage.setItem('items', JSON.stringify(items));
   }, [items]);
 
-  const addOrUpdateItem = (value) => {
+
+  const addOrUpdateItem = (nuevoItem) => {
     if (itemToEdit) {
-      setItems(items.map(item => item.id === itemToEdit.id ? { ...item, value } : item));
+      // console.log("hola");
+      setItems(items.map(item => item.id === itemToEdit.id ? { ...nuevoItem, id: item.id } : item));
       setItemToEdit(null);
     } else {
-      setItems([...items, { id: Date.now(), value }]);
+      // console.log("holados")
+      setItems([...items, { ...nuevoItem, id: Date.now() }]);
     }
+    // console.log(this.items);
   };
 
   const deleteItem = (id) => {
@@ -33,18 +38,12 @@ function App() {
     setItemToEdit(item);
   };
 
+
   return (
-    <div className="App">
-      <h1>Evaluacion de alumnos</h1>
-      <Form
-        addOrUpdateItem={addOrUpdateItem}
-        itemToEdit={itemToEdit}
-      />
-      <List
-        items={items}
-        deleteItem={deleteItem}
-        editItem={editItem}
-      />
+    <div className="contenedor">
+      <h1 className='bordeTitulo'><strong>Evaluacion de alumnos</strong></h1>
+      <Form addOrUpdateItem={addOrUpdateItem} itemToEdit={itemToEdit}/>
+      <List items={items} deleteItem={deleteItem} editItem={editItem}/>
     </div>
   );
 }

@@ -5,6 +5,7 @@ function Form({ addOrUpdateItem, itemToEdit }) {
   const [asignatura, setAsignatura] = useState('');
   const [promedio, setPromedio] = useState('');
 
+
   useEffect(() => {
     if (itemToEdit) {
       setNombre(itemToEdit.nombre);
@@ -18,6 +19,7 @@ function Form({ addOrUpdateItem, itemToEdit }) {
     }
   }, [itemToEdit]);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (nombre && asignatura && promedio) {
@@ -28,36 +30,33 @@ function Form({ addOrUpdateItem, itemToEdit }) {
     }
   };
 
+  
   return (
-    <form onSubmit={handleSubmit} className='formulario'>
+    <form onSubmit={handleSubmit} className='bordeFormulario'>
       
-      <h2>{itemToEdit ? 'Editar Evaluación' : 'Agregar Nueva Evaluacíon'}</h2>
-      <input
-        type="text"
-        placeholder="Ej: Juan Perez"
-        value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Ej: Matematicas"
-        value={asignatura}
-        onChange={(e) => setAsignatura(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Ej: 5.5"
-        value={promedio}
-        onChange={(e) => setPromedio(e.target.value)}
-      />
+        <h2>{itemToEdit ? 'Editar Evaluación' : 'Agregar Nueva Evaluacíon'}</h2>
 
-      <button className="btn btn-primary" type="submit">
-        { itemToEdit ? 'Actualizar Evaluación' : 'Agregar Evaluación' }
-      </button>
+        <div className='textLeft'>
+          <label>Nombre del Alumno:</label>
+          <input className='form-control' type="text" placeholder="Ej: Juan Perez" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
+
+          <label className='espacio'>Asignatura:</label>
+          <input className='form-control' type="text" placeholder="Ej: Matematicas" value={asignatura} onChange={(e) => setAsignatura(e.target.value)}/>
+
+          <label className='espacio'>Promedio (0.0 - 7.0):</label>
+          <input className='form-control' type="number" step="0.1" min="0.0" max="7.0" placeholder="Ej: 5.5" value={promedio} onChange={(e) => setPromedio(e.target.value)}/>
+        </div>
+
+        <div className='espacio'>
+          <button className="btn btn-primary form-control" type="submit">
+            {itemToEdit ? 'Actualizar Evaluación' : 'Agregar Evaluación'}
+          </button>
+        </div>
 
     </form>
     
   );
 }
+
 
 export default Form;

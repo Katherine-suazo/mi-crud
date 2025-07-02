@@ -3,18 +3,15 @@ import Item from './Item';
 
 function List({ items, deleteItem, editItem }) {
   return (
-    <div className='lista-evaluaciones'>
-      <h2>Evaluaciones Guardadas</h2>
-      <ul>
+    <div className='bordeEG'>
+      <h2><strong>Evaluaciones Guardadas</strong></h2>
+
+      <div className='border'>
         {items.map(item => (
-          <Item
-            key={item.id}
-            item={item}
-            deleteItem={deleteItem}
-            editItem={editItem}
-          />
+          <Item key={item.id} item={item} deleteItem={deleteItem} editItem={editItem} />
         ))}
-      </ul>
+      </div>
+      
     </div>
   );
 }
