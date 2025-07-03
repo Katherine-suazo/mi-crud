@@ -15,7 +15,7 @@
 .bordeFormulario {
     padding: 30px;
     border-radius: 10px;
-    margin: 30px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.426);
 }
 
@@ -43,7 +43,7 @@
 .bordeEG {
     padding: 15px;
     border-radius: 10px;
-    margin: 30px;
+    /* margin: 30px; */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.426)
 }
 
@@ -51,3 +51,4 @@
     border-radius: 10px;
     padding: 10px;
 }
+

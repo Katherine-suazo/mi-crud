@@ -34,7 +34,7 @@ function Form({ addOrUpdateItem, itemToEdit }) {
   return (
     <form onSubmit={handleSubmit} className='bordeFormulario'>
       
-        <h2>{itemToEdit ? 'Editar Evaluación' : 'Agregar Nueva Evaluacíon'}</h2>
+        <h3><strong>{itemToEdit ? 'Editar Evaluación' : 'Agregar Nueva Evaluacíon'}</strong></h3>
 
         <div className='textLeft'>
           <label>Nombre del Alumno:</label>

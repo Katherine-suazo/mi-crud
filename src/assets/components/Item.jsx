@@ -6,10 +6,10 @@ function Item({ item, deleteItem, editItem }) {
     <div>
 
       <div className='textLeft'>
-        <p><strong>Alumno:</strong> {item.nombre}</p>
+        <p><strong>Alumno: {item.nombre} </strong></p>
         <p>Asignatura: {item.asignatura}</p>
-        <p>Promedio: <strong>{item.promedio}</strong></p>
-        {item.promedio == 7.0 && <span className='destacado'>Destacado</span>}
+        <p>Promedio: <strong>{parseFloat(item.promedio).toFixed(1)}</strong> </p>
+        {item.promedio == 7 && <span className='destacado'>Destacado</span>}
       </div>
 
       <div className='botones'>
